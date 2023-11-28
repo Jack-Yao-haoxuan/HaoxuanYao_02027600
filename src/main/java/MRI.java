@@ -9,6 +9,8 @@ public class MRI extends Medical_investigation {
         this.URL=URL;
         this.MFS=MFS;
     }
+
+    //display the data to administrator
     public String adminDisplay(){
         return "Patient: "+getPat().getName()+" MRI: "+MFS+" Tesla, "+getDate()+"; ";
     }
