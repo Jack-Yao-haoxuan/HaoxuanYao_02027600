@@ -15,8 +15,10 @@ public class DoctorDisplay {
     }
 
     public void Display(){
+
+        //create a new frame and set its size
         JFrame frame= new JFrame(gc);
-        frame.setSize(700,300);
+        frame.setSize(900,300);
         // This next line closes the program when the frame is closed
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -54,12 +56,13 @@ public class DoctorDisplay {
         ImageIcon thisImageIcon2 = new ImageIcon(imageURL2);
         labelimage2.setIcon(thisImageIcon2);
 
-        //Investigation.BP data of patient
+        //BP data of patient
         JLabel labeltext2=new JLabel("<html>Blood pressure: <br> "+bp.getSP()+" over "+bp.getDP()+"</html>");
 
 
         //add to the frame
         frame.getContentPane().add(mainPanel);
+
         mainPanel.setLayout(new GridLayout(1,4));
         //means 1 row and 4 column
         mainPanel.add(labelimage1);
